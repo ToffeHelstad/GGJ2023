@@ -92,6 +92,20 @@ public class FPSCamera : MonoBehaviour
         LEngaged = true;
     }
 
+    void Grab()
+    {
+        if (mouseLocked == true)
+        {
+            UnlockMouse();
+        }
+        xRotation -= mouseY;
+        yRotation += mouseX;
+        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        rightHand.transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0);
+        leftHand.transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0);
+        BothEngaged = true;
+    }
+
     void LockMouse()
     {
         Cursor.lockState = CursorLockMode.Locked;
