@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController cc;                     //Reference to Character Controller component on object
     private Vector3 velocity;                           //Variables for velocity
 
+    [Header("Jump")]
+    public float jumpHeight;
+    private float jumpYPos;
+
     [HideInInspector]
     public Vector3 movementDir;
 
@@ -60,6 +64,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Move();
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Jump();
+        }
     }
 
     void Move()                                                                 //Function that allows movement
@@ -72,5 +81,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 motion = movementDir * runSpeed * Time.deltaTime;
         cc.Move(motion);
+    }
+
+    void Jump()
+    {
+        Debug.Log("Jumping");
+        jumpYPos = transform.position.y;
+        velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravityConstant * gravityMultiplier);
     }
 }
