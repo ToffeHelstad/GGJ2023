@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 6046497459779972517}
   m_Layer: 0
   m_Name: thatsnotaknif.png
-  m_TagString: Knife
+  m_TagString: Utensil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

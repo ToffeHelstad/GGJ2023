@@ -7,12 +7,13 @@ public class HandsyScript : MonoBehaviour
 
     private GameObject CollidedObject;                  // Reference to the GameObject that's being collided with.
 
-    private bool hasEquipped;                           // Track whether we've equipped anything at all
+    private bool RhasEquipped;                          // Track whether we've equipped anything in Right-hand
+    private bool LhasEquipped;                          // Track whether we've equipped anything in Left-hand
 
     private Rigidbody rb;                               // Reference to rigidbody-component of the collided gameObject.
 
-    private GameObject rEquipped;                       // Bool to track anything equipped in Right-hand
-    private GameObject lEquipped;                       // Bool to track anything equipped in Left-hand
+    private GameObject rEquipped;                       // Track the GameObject in our right-hand
+    private GameObject lEquipped;                       // Track the GameObject in our left-hand
 
     private NewFPS PlayerRef;                           // Reference to Player Character Script - in order to access Public bools
 
@@ -26,43 +27,76 @@ public class HandsyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     if (Input.GetKeyDown(KeyCode.E) && !hasEquipped)
+     if (Input.GetKeyDown(KeyCode.E))
         {
-            Equip();
-        }
-     else if(Input.GetKeyDown(KeyCode.E) && hasEquipped)
-        {
-            UnEquip();
+            if(PlayerRef.REngaged == true && !RhasEquipped)
+            {
+                //RhasEquipped = true;
+                rEquipped = CollidedObject.gameObject;
+                Equip();
+            }
+            else if(PlayerRef.LEngaged == true && !LhasEquipped)
+            {
+                //LhasEquipped = true;
+                lEquipped = CollidedObject.gameObject;
+                Equip();
+            }
+            else if (PlayerRef.REngaged == true && RhasEquipped)
+            {
+                //RhasEquipped = false;
+                UnEquip();
+            }
+            else if (PlayerRef.LEngaged == true && LhasEquipped)
+            {
+                //LhasEquipped = false;
+                UnEquip();
+            }
         }
     }
 
     void Equip()
     {
-        hasEquipped = true;
-        rEquipped = CollidedObject.gameObject;
-        if(CollidedObject.tag == "Knife")
+        if(CollidedObject.tag == "Utensil")
         {
             rb.isKinematic = true;
             CollidedObject.transform.parent = this.transform;
-        }
 
-        Debug.Log(PlayerRef.REngaged);
+            if (PlayerRef.REngaged == true)
+            {
+                RhasEquipped = true;
+            }
+            else if(PlayerRef.LEngaged == true)
+            {
+                LhasEquipped = true;
+            }
+        }
     }
 
     void UnEquip()
     {
-        hasEquipped = false;
-        rb.isKinematic = false;
-        rEquipped.transform.parent = null;
+        Rigidbody rbObj;
+        //rb.isKinematic = false;
+
+        if (PlayerRef.REngaged == true)
+        {
+            rbObj = rEquipped.GetComponent<Rigidbody>();
+            rEquipped.transform.parent = null;
+            rbObj.isKinematic = false;
+            RhasEquipped = false;
+        }
+        else if(PlayerRef.LEngaged == true)
+        {
+            rbObj = lEquipped.GetComponent<Rigidbody>();
+            lEquipped.transform.parent = null;
+            rbObj.isKinematic = false;
+            LhasEquipped = false;
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         CollidedObject = other.gameObject;
         rb = other.GetComponent<Rigidbody>();
-        Debug.Log("OnTriggerEnter has been entered");
-        Debug.Log(other.gameObject.name);
-
     }
 
 }
