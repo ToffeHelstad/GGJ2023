@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Pan
   - Tomato
+  - Spatula
   layers:
   - Default
   - TransparentFX
