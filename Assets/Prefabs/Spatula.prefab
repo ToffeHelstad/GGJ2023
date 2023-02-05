@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3957090452433930383}
   m_Layer: 0
   m_Name: Spatula
-  m_TagString: Untagged
+  m_TagString: Spatula
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 6253
+  m_VersionIndex: 6259
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
