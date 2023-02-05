@@ -1181,6 +1181,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1123631506}
+    - target: {fileID: 4268256932076470809, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5838682896595362596, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_Name
       value: thatsnotaknif.png
@@ -1191,15 +1195,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6046497459779972517, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.217
+      value: -0.785
       objectReference: {fileID: 0}
     - target: {fileID: 6046497459779972517, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.977
+      value: 2.907
       objectReference: {fileID: 0}
     - target: {fileID: 6046497459779972517, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.571
+      value: 3.159
       objectReference: {fileID: 0}
     - target: {fileID: 6046497459779972517, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1245,6 +1249,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1776201876}
+    - target: {fileID: 6735600475481021551, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7442492955512894611, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1930,8 +1938,37 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19608265, y: 0.68060726, z: 0.1134114}
-  m_Center: {x: 0.018589202, y: 0.33270034, z: -0.03711182}
+  m_Size: {x: 0.19608265, y: 0.23908356, z: 0.1134114}
+  m_Center: {x: 0.018591167, y: 0.11194024, z: -0.037110012}
+--- !u!54 &1785919371
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785919367}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!65 &1785919372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785919367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09374596, y: 0.69096243, z: 0.118724175}
+  m_Center: {x: 0.024186308, y: 0.32557702, z: -0.056148894}
 --- !u!4 &2092758925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6217777464284293669, guid: a1bc38b4c7040fc4fb6e1429df6d3573, type: 3}
