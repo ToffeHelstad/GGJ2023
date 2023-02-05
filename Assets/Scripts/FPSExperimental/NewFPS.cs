@@ -27,6 +27,9 @@ public class NewFPS : MonoBehaviour
     public GameObject rightHand;
     public GameObject leftHand;
 
+    public BoxCollider AttachPointLeft;
+    public BoxCollider AttachPointRight;
+
     float mouseX;
     float mouseY;
 
@@ -95,6 +98,12 @@ public class NewFPS : MonoBehaviour
 
         transform.localRotation = xQuat * yQuat; //Quaternions seem to rotate more consistently than EulerAngles. Sensitivity seemed to change slightly at certain degrees using Euler. transform.localEulerAngles = new Vector3(-rotation.y, rotation.x, 0);
     }
+
+    void GrabItem()
+    {
+        Debug.Log("I'm colliding!!");
+    }
+
 
     void LockMouse()
     {
