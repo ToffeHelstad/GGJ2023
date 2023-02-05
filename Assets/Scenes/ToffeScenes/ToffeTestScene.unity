@@ -230,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172683486}
   - component: {fileID: 172683487}
+  - component: {fileID: 172683488}
   m_Layer: 0
   m_Name: AttachPointLeft
   m_TagString: Untagged
@@ -265,6 +266,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &172683488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172683485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79a09196f07c4c498fb276681d37e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &189679930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 1123631506}
     - target: {fileID: 2210261024880100131, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_VersionIndex
-      value: 3594
+      value: 3597
       objectReference: {fileID: 0}
     - target: {fileID: 4268256932076470809, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_Mesh
@@ -1188,6 +1201,10 @@ PrefabInstance:
     - target: {fileID: 5838682896595362596, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_Name
       value: thatsnotaknif.png
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838682896595362596, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
+      propertyPath: m_TagString
+      value: Utensil
       objectReference: {fileID: 0}
     - target: {fileID: 6046497459779972517, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_RootOrder
@@ -1243,7 +1260,7 @@ PrefabInstance:
       objectReference: {fileID: 1776201876}
     - target: {fileID: 6618960443448536983, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_VersionIndex
-      value: 4134
+      value: 4137
       objectReference: {fileID: 0}
     - target: {fileID: 6735600475481021551, guid: f4636bfb0c902104eac4478c8f0d3fe0, type: 3}
       propertyPath: m_Mesh
